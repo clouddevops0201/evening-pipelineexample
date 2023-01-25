@@ -8,10 +8,31 @@ pipeline{
             }
             
         }
-        stage("MAVEN Build"){
+        stage("test"){
             steps{
-                //echo "this is build section"
-                bat 'mvn clean install'
+                echo "this is test section"
+                //bat 'mvn clean install'
+            }
+            
+        }
+		stage("UAT"){
+            steps{
+                echo "this is uat section"
+                //bat 'mvn clean install'
+            }
+            
+        }
+		stage("PROD"){
+            steps{
+                echo "this is prod section"
+                //bat 'mvn clean install'
+            }
+            
+        }
+		stage("perf"){
+            steps{
+                echo "this is perf section"
+                //bat 'mvn clean install'
             }
             
         }
